@@ -7,7 +7,7 @@ int leap_year(int year);
 
 
 
-int main() {
+int main(int argc, char *argv[]) {
     /*
     *traverse the array
     int nelems = 10;
@@ -20,13 +20,27 @@ int main() {
     }
     printf("\n");
     */
+
     /*
     *is a leap year?
     int year = 2020;
     printf("%d %s a leap year.\n", year, leap_year(year) ? "is" : "is not");
     */
-    
-    return 0;
+   /*
+   *singular and plural number printing
+   int n = 2;
+   printf("The list has %d item%s\n", n, n==1? "" : "s");
+   */
+  FILE *fin, *fout;
+  if (argc != 3) {
+      printf("Usage: cp input output\n");
+  }
+  else if ((fin = fopen(argv[1], "r")) == NULL) {
+      print("can't open input file %s", argv[1]);
+  }
+  else if (())
+  
+   return 0;
 }
  
 int leap_year(int year) {
