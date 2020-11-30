@@ -31,14 +31,9 @@ int main(int argc, char *argv[]) {
    int n = 2;
    printf("The list has %d item%s\n", n, n==1? "" : "s");
    */
-  FILE *fin, *fout;
-  if (argc != 3) {
-      printf("Usage: cp input output\n");
-  }
-  else if ((fin = fopen(argv[1], "r")) == NULL) {
-      print("can't open input file %s", argv[1]);
-  }
-  else if (())
+  
+
+
   
    return 0;
 }
