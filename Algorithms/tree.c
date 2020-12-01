@@ -7,15 +7,16 @@
 int main(int argc, char *argv[]) {
     Nameral *treep;
     treep = insert(treep, newitem("smiley", 0x263A));
-    //treep = insert(treep, newitem("zeta", 0x03b6));
-    //treep = insert(treep, newitem("Aacute", 0x00c1));
-    //treep = insert(treep, newitem("Acirc", 0x00c2));
-    //treep = insert(treep, newitem("AElig", 0x00c6));
+    treep = insert(treep, newitem("zeta", 0x03b6));
+    treep = insert(treep, newitem("Aacute", 0x00c1));
+    treep = insert(treep, newitem("Acirc", 0x00c2));
+    treep = insert(treep, newitem("AElig", 0x00c6));
     applypostorder(treep, printnv, "%s: %x\n");
     return 0;
 }
 Nameral *newitem(char *name, int value) {
     Nameral *p;
+    p = (Nameral *) malloc(sizeof(Nameral));
     p -> name = name;
     p -> value = value;
     p -> left =  NULL;
